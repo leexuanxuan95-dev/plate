@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leexuanxuan95-dev.github.io/plate/sitemap.xml
