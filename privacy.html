@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy · Plate</title>
+  <meta name="description" content="Plate's privacy policy. Photos analyzed on device by default. No tracking. No selling data." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header class="brand">
+      <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;">
+        <div class="logo" aria-hidden="true">
+          <span class="glyph">P</span>
+          <span class="sprig"></span>
+        </div>
+        <div>
+          <div class="brand-name">PLATE</div>
+          <div class="brand-meta">Privacy Policy</div>
+        </div>
+      </a>
+    </header>
+
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: 2026-05-03</div>
+
+    <p>Plate ("we", "the app") is an iOS calorie and meal tracker. This page explains what data the app handles, where that data lives, and what choices you have.</p>
+
+    <h2>Summary</h2>
+    <ul>
+      <li><strong>We do not track you.</strong> No analytics SDKs, no advertising IDs, no third-party trackers.</li>
+      <li><strong>We do not sell your data.</strong> Ever.</li>
+      <li><strong>Your meal log lives on your device.</strong> It is not uploaded to our servers unless you explicitly use a Pro feature that requires server processing.</li>
+      <li><strong>Apple Health is opt-in.</strong> Plate only reads from or writes to Apple Health if you grant permission, and only for the categories listed below.</li>
+    </ul>
+
+    <h2>What data Plate handles</h2>
+    <ul>
+      <li><strong>Meal logs</strong> — the foods you log, portions, macros, and timestamps. Stored locally in the app's sandbox (UserDefaults + the Documents directory). Never leaves your device unless you explicitly export it via the Settings → "Export my data" feature.</li>
+      <li><strong>Meal photos</strong> — photos you snap inside Plate. Stored locally as JPEGs in the app's Documents directory. By default the photo is processed on device. If you opt into Pro features that require server analysis, an anonymized photo is sent to our analysis endpoint and is not retained after the response.</li>
+      <li><strong>Voice transcripts</strong> — when you use the voice add feature, audio is processed via Apple's on-device Speech Recognition and converted to text. The audio is not stored, and the text is treated as a normal meal log entry (kept locally).</li>
+      <li><strong>Goal preferences</strong> — your weight goal, daily kcal target, and water target. Stored locally.</li>
+      <li><strong>Apple Health (optional)</strong> — if you grant access, Plate reads body mass, height, and active energy from Apple Health to calibrate calorie targets. With your permission, Plate writes dietary energy, water, protein, fat, and carbs from your meals back to Apple Health. We never see this data; it stays inside Apple's HealthKit on your device.</li>
+    </ul>
+
+    <h2>What we do <em>not</em> collect</h2>
+    <ul>
+      <li>We do not request or store your name, email address, phone number, or location.</li>
+      <li>We do not assign you an analytics ID.</li>
+      <li>We do not link any of the data above to your identity.</li>
+    </ul>
+
+    <h2>Required permission descriptions</h2>
+    <p>iOS requires apps to declare why they request each permission. Plate requests the following:</p>
+    <ul>
+      <li><strong>Camera</strong> — to take photos of your meals for analysis.</li>
+      <li><strong>Microphone</strong> — for hands-free meal logging by voice.</li>
+      <li><strong>Speech Recognition</strong> — to transcribe what you say into a meal log entry, on device when supported.</li>
+      <li><strong>Photo Library Add</strong> — only if you choose to save a captured meal photo.</li>
+      <li><strong>HealthKit (read)</strong> — to read weight, height, and active energy from Apple Health if you connect.</li>
+      <li><strong>HealthKit (write)</strong> — to write dietary energy, water, protein, fat, and carbs from logged meals.</li>
+    </ul>
+
+    <h2>Subscriptions and purchases</h2>
+    <p>Plate Pro is sold via Apple's StoreKit. Apple, not Plate, processes the payment and stores billing information. Plate receives only an anonymous entitlement signal that says whether the device is currently a Pro subscriber. Apple's billing data flows are governed by <a href="https://www.apple.com/legal/privacy/data/en/app-store/" target="_blank" rel="noopener">Apple's privacy policy</a>.</p>
+
+    <h2>Data retention and deletion</h2>
+    <p>Because the app is account-less, your data is whatever is on your device. You can delete everything Plate has stored at any time via <em>Settings → Delete all data</em>. This removes meals, photos, and water logs from this device. If you also want to remove the data Plate may have written into Apple Health, you can do so from the Apple Health app. Uninstalling Plate also removes its sandboxed data.</p>
+
+    <h2>Children</h2>
+    <p>Plate is not directed to children under 13. We do not knowingly collect personal data from children. If you believe a child has used the app, deleting all data via Settings will remove anything the device has logged.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy. Material changes will be reflected in the "Last updated" date above. Continuing to use Plate after the policy is updated indicates your acceptance of the new version.</p>
+
+    <h2>Contact</h2>
+    <p>For privacy questions, contact <a href="mailto:hello@plate.app">hello@plate.app</a>.</p>
+
+    <footer>
+      <a href="index.html">← Back to Plate</a>
+      <span>© 2026 Plate</span>
+    </footer>
+  </main>
+</body>
+</html>

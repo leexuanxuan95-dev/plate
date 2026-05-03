@@ -1,0 +1,174 @@
+/* Plate · marketing/legal site stylesheet.
+   Mirrors the in-app palette: off-white background, plate-ceramic accents,
+   calorie-ink for body, protein-green for highlights. */
+
+:root {
+  --bg: #FBFAF7;
+  --plate: #F2EEE3;
+  --ink: #1A1A1A;
+  --muted: #4A4A4A;
+  --green: #3F7A4D;
+  --hairline: rgba(0, 0, 0, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter",
+               "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+header.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--plate);
+  position: relative;
+  flex: 0 0 44px;
+}
+.logo::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.logo .glyph {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+  font-family: "SF Pro Display", -apple-system, system-ui, sans-serif;
+}
+.logo .sprig {
+  position: absolute;
+  width: 10px;
+  height: 12px;
+  right: 4px;
+  top: 8px;
+  background: var(--green);
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(20deg);
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.brand-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 36px 0 8px;
+}
+
+p, li { color: var(--ink); }
+
+p { margin: 12px 0 16px; }
+
+ul {
+  padding-left: 22px;
+  margin: 8px 0 16px;
+}
+
+li { margin: 6px 0; }
+
+a { color: var(--green); }
+a:hover { text-decoration: underline; }
+
+.card {
+  background: var(--plate);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 20px 0;
+}
+
+.tile-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.tile {
+  display: block;
+  background: var(--plate);
+  border-radius: 14px;
+  padding: 18px;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid transparent;
+  transition: border-color 120ms ease;
+}
+.tile:hover { border-color: var(--green); }
+.tile h3 { font-size: 15px; margin: 0 0 4px; font-weight: 600; }
+.tile p  { font-size: 13px; color: var(--muted); margin: 0; }
+
+footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline);
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.updated {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: -16px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 540px) {
+  main { padding: 28px 18px 72px; }
+  h1 { font-size: 26px; }
+  .tile-row { grid-template-columns: 1fr; }
+}
