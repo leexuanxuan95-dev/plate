@@ -23,26 +23,37 @@
     </header>
 
     <h1>Privacy Policy</h1>
-    <div class="updated">Last updated: 2026-05-03</div>
+    <div class="updated">Last updated: 2026-05-05</div>
 
     <p>Plate ("we", "the app") is an iOS calorie and meal tracker. This page explains what data the app handles, where that data lives, and what choices you have.</p>
 
     <h2>Summary</h2>
     <ul>
-      <li><strong>We do not track you.</strong> No analytics SDKs, no advertising IDs, no third-party trackers.</li>
+      <li><strong>Plate runs entirely on your iPhone.</strong> The app makes no outbound network requests at runtime. Your meals, photos, voice, weight, water log, and coach chats never leave your device.</li>
+      <li><strong>No third-party AI service.</strong> Plate does not send any data to OpenAI, Anthropic, Google, Cloudflare, AWS, or any other AI/cloud provider. Photo recognition, macro estimation, and the "Macro Coach AI" all run on this device using local algorithms.</li>
+      <li><strong>We do not track you.</strong> No analytics SDKs, no advertising IDs, no third-party trackers, no remote logging.</li>
       <li><strong>We do not sell your data.</strong> Ever.</li>
-      <li><strong>Your meal log lives on your device.</strong> It is not uploaded to our servers unless you explicitly use a Pro feature that requires server processing.</li>
       <li><strong>Apple Health is opt-in.</strong> Plate only reads from or writes to Apple Health if you grant permission, and only for the categories listed below.</li>
     </ul>
 
     <h2>What data Plate handles</h2>
     <ul>
-      <li><strong>Meal logs</strong> — the foods you log, portions, macros, and timestamps. Stored locally in the app's sandbox (UserDefaults + the Documents directory). Never leaves your device unless you explicitly export it via the Settings → "Export my data" feature.</li>
-      <li><strong>Meal photos</strong> — photos you snap inside Plate. Stored locally as JPEGs in the app's Documents directory. By default the photo is processed on device. If you opt into Pro features that require server analysis, an anonymized photo is sent to our analysis endpoint and is not retained after the response.</li>
-      <li><strong>Voice transcripts</strong> — when you use the voice add feature, audio is processed via Apple's on-device Speech Recognition and converted to text. The audio is not stored, and the text is treated as a normal meal log entry (kept locally).</li>
+      <li><strong>Meal logs</strong> — the foods you log, portions, macros, and timestamps. Stored locally in the app's sandbox (UserDefaults + the Documents directory). Never leaves your device unless you explicitly export it via Settings → "Export my data".</li>
+      <li><strong>Meal photos</strong> — photos you snap inside Plate. Stored locally as JPEGs in the app's Documents directory. Image recognition runs on this device; photos are never uploaded.</li>
+      <li><strong>Voice transcripts</strong> — when you use the voice add feature, audio is processed via Apple's Speech Recognition (on-device when supported) and converted to text. The audio is not stored, and the text is treated as a normal meal log entry (kept locally).</li>
       <li><strong>Goal preferences</strong> — your weight goal, daily kcal target, and water target. Stored locally.</li>
       <li><strong>Apple Health (optional)</strong> — if you grant access, Plate reads body mass, height, and active energy from Apple Health to calibrate calorie targets. With your permission, Plate writes dietary energy, water, protein, fat, and carbs from your meals back to Apple Health. We never see this data; it stays inside Apple's HealthKit on your device.</li>
     </ul>
+
+    <h2>Third-party data sharing</h2>
+    <p>Plate does <strong>not</strong> share your data with any third party. Specifically:</p>
+    <ul>
+      <li>Plate does not call any third-party AI / machine learning service. There is no URLSession, no SDK, no remote endpoint contacted at runtime.</li>
+      <li>Plate does not embed analytics frameworks (Firebase, Mixpanel, Amplitude, etc.).</li>
+      <li>Plate does not embed advertising frameworks (AdMob, Meta Audience Network, etc.).</li>
+      <li>Plate does not maintain user accounts and has no backend server of its own.</li>
+    </ul>
+    <p>The only data flow that may leave your device is Apple's StoreKit billing (handled by Apple itself) and any data you actively share via the iOS Share Sheet (e.g., exporting a JSON backup to email or AirDrop) — both of which require an explicit user action.</p>
 
     <h2>What we do <em>not</em> collect</h2>
     <ul>
